@@ -10,7 +10,7 @@ class User(db.Model):
     last_name = db.Column(db.String(50))
     password = db.Column(db.String(100))
     posts = db.relationship('Post', backref='user', lazy='dynamic')
-    comments = db.relationship('PostComment' backref='user', lazy='dynamic')
+    comments = db.relationship('PostComment', backref='user', lazy='dynamic')
 
 
 class Post(db.Model):
