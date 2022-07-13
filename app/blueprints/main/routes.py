@@ -8,9 +8,9 @@ def home():
         "username": "username"
     }
     context = user_dict
-    return render_template('/app/templates/index.html', **context)
+    return render_template('index.html', **context)
 
 
 @app.route('/about')
 def about():
-    return render_template('/app/templates/about.html')
+    return render_template('about.html')
