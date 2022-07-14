@@ -1,13 +1,45 @@
-{% extends './layout.html' %} {% block content %}
+{% extends './layout.html' %}
+
+{% block content %}
+
 <div class="container">
-  <div class="jumbotron">
-    <h1 class="display-3">Home Page</h1>
-    <p class="lead">Welcome {{ username }}</p>
-    <hr class="my-2" />
-    <p>Click below to login.</p>
-    <p class="lead">
-      <a class="btn btn-primary btn-lg" href="./login" role="button">Login</a>
-    </p>
+  <form class="d-flex" action="index.html">
+    <div class="col">
+      <div class="mb-3">
+        <label for="make" class="form-label">Make</label>
+        <input type="text" name="make" id="make" class="form-control" placeholder="car make">
+      </div>
+      <div class="mb-3">
+        <label for="model" class="form-label">Model</label>
+        <input type="text" class="form-control" name="model" id="model" placeholder="car model">
+      </div>
+      <div class="mb-3">
+        <label for="year" class="form-label">Year</label>
+        <input type="text" class="form-control" name="year" id="year" placeholder="car year">
+      </div>
+      <div class="mb-3">
+        <label for="color" class="form-label">Color</label>
+        <input type="text" class="form-control" name="color" id="color" placeholder="car color">
+      </div>
+      <div class="mb-3">
+        <label for="price" class="form-label">Price</label>
+        <input type="text" class="form-control" name="price" id="price" placeholder="car price">
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+  </form>
+</div>
+
+{% for car in cars %}
+<div class="card">
+  <div class="card-body">
+    <h4 class="card-title">Car: {{ car.id }}</h4>
+    <p class="card-text">{{ car.make }}</p>
+    <p class="card-text">{{ car.model }}</p>
+    <p class="card-text">{{ car.year }}</p>
+    <p class="card-text">{{ car.color }}</p>
+    <p class="card-text">{{ car.price }}</p>
   </div>
 </div>
+
 {% endblock content %}
