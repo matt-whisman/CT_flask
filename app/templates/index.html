@@ -1,31 +1,44 @@
+<!DOCTYPE html>
 {% extends './layout.html' %}
 
 {% block content %}
 
 <div class="container">
-  <form class="d-flex" action="{{ url_for('main.home') }}">
-    <div class="col">
-      <div class="mb-3">
-        <label for="make" class="form-label">Make</label>
-        <input type="text" name="make" id="make" class="form-control" placeholder="car make">
+  <form>
+    <div class="mb-3 row">
+      <label for="make" class="col-xs-4 col-form-label">Make</label>
+      <div class="col-xs-8">
+        <input type="text" class="form-control" name="make" id="make" placeholder="Make">
       </div>
-      <div class="mb-3">
-        <label for="model" class="form-label">Model</label>
-        <input type="text" class="form-control" name="model" id="model" placeholder="car model">
+    </div>
+    <div class="mb-3 row">
+      <label for="model" class="col-xs-4 col-form-label">Model</label>
+      <div class="col-xs-8">
+        <input type="text" class="form-control" name="model" id="model" placeholder="Honda">
       </div>
-      <div class="mb-3">
-        <label for="year" class="form-label">Year</label>
-        <input type="text" class="form-control" name="year" id="year" placeholder="car year">
+    </div>
+    <div class="mb-3 row">
+      <label for="year" class="col-xs-4 col-form-label">Year</label>
+      <div class="col-xs-8">
+        <input type="text" class="form-control" name="year" id="year" placeholder="2005">
       </div>
-      <div class="mb-3">
-        <label for="color" class="form-label">Color</label>
-        <input type="text" class="form-control" name="color" id="color" placeholder="car color">
+    </div>
+    <div class="mb-3 row">
+      <label for="color" class="col-xs-4 col-form-label">Color</label>
+      <div class="col-xs-8">
+        <input type="text" class="form-control" name="color" id="color" placeholder="blue">
       </div>
-      <div class="mb-3">
-        <label for="price" class="form-label">Price</label>
-        <input type="text" class="form-control" name="price" id="price" placeholder="car price">
+    </div>
+    <div class="mb-3 row">
+      <label for="price" class="col-xs-4 col-form-label">Price</label>
+      <div class="col-xs-8">
+        <input type="text" class="form-control" name="price" id="price" placeholder="25000.00">
       </div>
-      <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+    <div class="mb-3 row">
+      <div class="offset-sm-4 col-sm-8">
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </div>
     </div>
   </form>
 </div>
