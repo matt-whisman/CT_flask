@@ -5,6 +5,7 @@ from flask_migrate import Migrate
 from flask_sqlalchemy import SQLAlchemy
 
 db = SQLAlchemy()
+migrate = Migrate()
 login_manager = LoginManager()
 
 
@@ -13,8 +14,6 @@ def create_app():
 
     # connect Config class to our app instance
     app.config.from_object(Config)
-
-    migrate = Migrate()
 
     # initialize instance of db
     db.init_app(app)
